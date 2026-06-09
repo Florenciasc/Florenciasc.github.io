@@ -160,7 +160,7 @@ padding:100px 0;
 }
 
 .section-alt{
-background:#172238;
+background:#142033;};
 }
 
 h2{
@@ -375,6 +375,128 @@ text-align:center;
 
 .project-card{
 padding:24px;
+}
+
+}
+/* =====================================
+   SPORTS ANALYTICS PORTFOLIO EXTENSIONS
+===================================== */
+
+/* Conference & Sports Images */
+
+#conference img,
+#sports img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+#conference .project-card:first-child,
+#sports .project-card:first-child{
+padding:0;
+overflow:hidden;
+}
+
+
+/* Current Section */
+
+#current .project-card{
+text-align:center;
+background:
+linear-gradient(
+180deg,
+rgba(15,23,42,.85),
+rgba(15,23,42,.65)
+);
+}
+
+
+/* Featured Project Highlight */
+
+#featured{
+position:relative;
+}
+
+#featured::before{
+content:"CASO PRINCIPAL";
+position:absolute;
+top:24px;
+right:8%;
+font-size:.75rem;
+letter-spacing:.22em;
+font-weight:800;
+color:rgba(34,211,238,.22);
+}
+
+
+/* Developing Projects */
+
+#developing .project-card{
+border:1px solid rgba(34,211,238,.18);
+}
+
+#developing .project-card:hover{
+border-color:#22d3ee;
+}
+
+
+/* Enhanced Impact Cards */
+
+.impact{
+padding:18px 22px;
+border-radius:16px;
+background:rgba(34,197,94,.08);
+border:1px solid rgba(34,197,94,.15);
+display:inline-block;
+}
+
+
+/* Image Hover */
+
+.project-card img{
+transition:.35s ease;
+}
+
+.project-card:hover img{
+transform:scale(1.03);
+}
+
+
+/* Footer */
+
+.footer{
+background:
+linear-gradient(
+180deg,
+#111827,
+#0b1120
+);
+}
+
+
+/* Mobile */
+
+@media(max-width:620px){
+
+.hero-description{
+font-size:1rem;
+}
+
+.hero-stack{
+font-size:.9rem;
+}
+
+.project-card{
+padding:24px;
+}
+
+.project-card img{
+height:220px;
+}
+
+#conference img,
+#sports img{
+height:220px;
 }
 
 }
