@@ -727,3 +727,20 @@ h3 {
     width: 100%;
   }
 }
+
+
+/* Casos de contenido de marca */
+.brand-cases, .samples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+.brand-case { padding: clamp(1.1rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.brand-case h3 { margin: .5rem 0; font-size: 1.6rem; }
+.brand-case p { line-height: 1.65; }
+.brand-case a, .sample summary { color: var(--accent); }
+.tata, .samples { margin-top: 1.4rem; }
+.sample { min-width: 0; }
+.sample h4 { font-size: 1.1rem; margin: 0 0 .65rem; }
+.frames { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: .5rem; padding-bottom: .4rem; }
+.frames img { width: 100%; height: auto; aspect-ratio: 1; flex: 0 0 100%; scroll-snap-align: start; border-radius: 12px; }
+.frames:has(img:nth-child(2)) img { flex-basis: 84%; width: 84%; }
+.sample summary { cursor: pointer; padding: .6rem 0; }
+.sample-note { color: var(--muted); }
+@media(max-width: 700px) { .brand-cases, .samples { grid-template-columns: 1fr; } }
