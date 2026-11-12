@@ -15,7 +15,7 @@ if (navToggle && mainNav) {
   });
 }
 
-const revealElements = document.querySelectorAll(".reveal");
+const revealElements = document.querySelectorAll(".reveal, .esdec-stats li");
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
@@ -30,7 +30,10 @@ if ("IntersectionObserver" in window) {
     { threshold: 0.14 }
   );
 
-  revealElements.forEach((element) => observer.observe(element));
+  revealElements.forEach((element) => {
+    element.classList.add("reveal");
+    observer.observe(element);
+  });
 } else {
   revealElements.forEach((element) => element.classList.add("is-visible"));
 }
